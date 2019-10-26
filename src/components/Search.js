@@ -1,11 +1,24 @@
-import React from 'react'; 
+import React, { Component } from 'react'; 
 
-const Search = () => {
-    return (
-        <>
-        
-        </>
-    );
+class Search extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            input: ''
+        };
+    }
+    render() {
+
+
+
+        return (
+            <form>
+                <input>
+                </input>
+            </form>
+        );
+    }
+    
 }
 
 export default Search; 
