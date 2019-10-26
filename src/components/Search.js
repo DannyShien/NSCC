@@ -4,15 +4,26 @@ class Search extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            input: ''
+            search: ''
         };
     }
     render() {
 
-
+        comicSearch = (input) => {
+            this.serState({
+                search: input
+            });
+        }
 
         return (
-            <form>
+            <form
+                className='form'
+                onSubmit={(event) => {
+                    console.log(`FORM SUBMITTED`)
+                    event.preventDefault();
+                    submit(event)
+                }}
+            >
                 <input>
                 </input>
             </form>
