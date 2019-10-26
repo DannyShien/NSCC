@@ -4,8 +4,9 @@ import {
     Route,
 }   from 'react-router-dom';
 import NavBar from './components/NavBar'
-import Latest from './components/Lastest'
+import Latest from './components/Latest'
 import Search from './components/Search'
+
 
 function App() {
     return (
