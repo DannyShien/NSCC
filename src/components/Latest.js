@@ -4,7 +4,9 @@ class Latest extends Component {
     constructor(props) {
         super(props); 
         this.state = ({
-            latestComic: []
+            latestComic: [],
+            alt: '', 
+            title: ''
         })
     }
     componentDidMount() {
@@ -16,21 +18,30 @@ class Latest extends Component {
             .then(r => {return r.json()})
             .catch(err => {console.log(err)})
             .then(this.displayComic)
+            // .then(this.imageDetail)
     }
     
     displayComic = (obj) => {
-        console.log(`COMIC OBJECT: `, obj)
-        let comic = obj.img
+        let comicObj = obj
+        console.log(`COMIC OBJECT: `, comicObj)
+        let comic = comicObj.img
+        let alt = comicObj.title
+        let title = comicObj.alt
 
         this.setState({
-            latestComic: comic
+            latestComic: comic,
+            alt: alt, 
+            title: title
         })
+
+        return comicObj;
     }
+    
 
     render () {
         return (
             <div>
-                <img src={this.state.latestComic} className='latestImage' />
+                <img src={this.state.latestComic} className='latestImage' alt={this.state.alt} title={this.state.title} />
             </div>
         )
     }    
