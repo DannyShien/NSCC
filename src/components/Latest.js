@@ -4,7 +4,7 @@ class Latest extends Component {
     constructor(props) {
         super(props); 
         this.state = ({
-            comic: []
+            latestComic: []
         })
     }
     componentDidMount() {
@@ -23,14 +23,14 @@ class Latest extends Component {
         let comic = obj.img
 
         this.setState({
-            comic: comic
+            latestComic: comic
         })
     }
 
     render () {
         return (
             <div>
-                <img src={this.state.comic} className='latestImage' />
+                <img src={this.state.latestComic} className='latestImage' />
             </div>
         )
     }    
