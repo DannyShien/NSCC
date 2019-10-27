@@ -18,7 +18,6 @@ class Latest extends Component {
             .then(r => {return r.json()})
             .catch(err => {console.log(err)})
             .then(this.displayComic)
-            // .then(this.imageDetail)
     }
     
     displayComic = (obj) => {
@@ -33,8 +32,6 @@ class Latest extends Component {
             alt: alt, 
             title: title
         })
-
-        return comicObj;
     }
     
 
