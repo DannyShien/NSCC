@@ -1,4 +1,6 @@
 import React, { Component } from 'react'; 
+import Form from './Form'
+import Display from './Display'
 
 class Search extends Component {
     constructor(props) {
@@ -40,69 +42,20 @@ class Search extends Component {
 
     render() {
         return (
-            <div>
-                <form
-                    className='form'
-                    onSubmit={(event) => {
-                        console.log(`FORM SUBMITTED`)
-                        event.preventDefault();
-                        this.submit()
-                    }}
-                >
-                    <input
-                        className = 'searchInput'
-                        text = 'text'
-                        onChange = {(e) => {
-                            console.log(e.target.value)
-                            this.comicSearch(e.target.value)
-                        }}
-                        name = 'search' 
-                        value = {this.state.search}
-                    />
-                    <button
-                        className='searchSubmit'
-                        type='submit'
-                    >Submit</button>
-                </form>
-                <div>
-                    <img src={this.state.comicDisplay} className='searchImage' alt={this.state.alt} title={this.state.title} />
-                </div>
-            </div>
+            <>
+                <Form
+                    input = {this.state.searchComic}
+                    submit = {this.submit}
+                    handleChange = {this.comicSearch}
+                />
+                <Display 
+                    display = {this.state.comicDisplay}
+                    alt = {this.state.alt}
+                    title = {this.state.title}
+                />
+            </>    
         );
     }
-
-     // displaySearchedComic = () => {
-    //     return (
-    //         this.state.searchComic === null ?
-    //             <form
-    //                 className='form'
-    //                 onSubmit={(event) => {
-    //                     console.log(`FORM SUBMITTED`)
-    //                     event.preventDefault();
-    //                     this.submit()
-    //                 }}
-    //             >
-    //                 <input
-    //                     className = 'searchInput'
-    //                     text = 'text'
-    //                     onChange = {(e) => {
-    //                         console.log(e.target.value)
-    //                         this.comicSearch(e.target.value)
-    //                     }}
-    //                     name = 'search' 
-    //                     value = {this.state.search}
-    //                 />
-    //                 <button
-    //                     className='searchSubmit'
-    //                     type='submit'
-    //                 >Submit</button>
-    //             </form>
-    //         : 
-    //         <div>
-    //             <img src={this.state.comicDisplay} className='searchImage' alt={this.state.alt} title={this.state.title}
-    //         </div>
-    //     )
-    // }
     
 }
 
