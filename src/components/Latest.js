@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Display.css'
 
 class Latest extends Component {
     constructor(props) {
@@ -37,7 +38,7 @@ class Latest extends Component {
 
     render () {
         return (
-            <div>
+            <div className = 'display'>
                 <img src={this.state.latestComic} className='latestImage' alt={this.state.alt} title={this.state.title} />
             </div>
         )
