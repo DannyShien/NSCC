@@ -1,5 +1,5 @@
 .navbar {
-    /* width: 100vw;  */
+    width: inherit; 
     height: 50px; 
     font-size: 150%;
 
