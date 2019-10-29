@@ -1,0 +1,7 @@
+.display {
+    display:flex; 
+    justify-content: center;
+    width: 75vw;
+    background-color: white;
+}
+
