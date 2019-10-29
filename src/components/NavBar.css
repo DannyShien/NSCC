@@ -1,0 +1,13 @@
+.navbar {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    width: 75vw;
+    height: 50px; 
+    font-size: 150%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

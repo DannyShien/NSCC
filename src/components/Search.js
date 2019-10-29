@@ -1,6 +1,7 @@
 import React, { Component } from 'react'; 
 import Form from './Form'
 import Display from './Display'
+import './Display.css'
 
 class Search extends Component {
     constructor(props) {

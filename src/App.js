@@ -6,14 +6,18 @@ import {
 import NavBar from './components/NavBar'
 import Latest from './components/Latest'
 import Search from './components/Search'
+import './App.css'
 
 
-function App() {
+
+const App = () => {
     return (
         <Router>
-            <NavBar />
-            <Route path = '/' exact component = {Latest} />
-            <Route path = '/search' component = {Search} />
+            <div className='App'>
+                <NavBar />
+                <Route path = '/' exact component = {Latest} />
+                <Route path = '/search' component = {Search} />
+            </div>
         </Router>
     );
 }
