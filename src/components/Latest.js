@@ -37,8 +37,12 @@ class Latest extends Component {
     
 
     render () {
+        const displayStyle = {
+            padding: '5px',
+            backgroundColor: 'white'
+        }
         return (
-            <div className = 'display'>
+            <div className = 'display' style={displayStyle}>
                 <img src={this.state.latestComic} className='latestImage' alt={this.state.alt} title={this.state.title} />
             </div>
         )
