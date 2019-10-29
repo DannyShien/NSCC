@@ -1,4 +1,5 @@
 import React from 'react';
+import './Form.css'
 
 const Form = (props) => {
     return (
@@ -21,7 +22,7 @@ const Form = (props) => {
                 value = {props.input}
             />
             <button
-                className='searchSubmit'
+                className='submitBtn'
                 type='submit'
             >Submit</button>
         </form>
